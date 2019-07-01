@@ -3,6 +3,6 @@ public class Hello {
         new Hello().foo();
     }
     public void foo() {
-        System.out.println("Hello, world!");
+        System.out.println("Hello, India");
     }
 }
