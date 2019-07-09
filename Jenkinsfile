@@ -11,7 +11,7 @@ pipeline {
         
          stage ('Compile Stage') {
             steps {
-                withAnt(ant : 'ant') {
+                withAnt(compile: 'ant', 'localJDK') {
                     sh 'ant compile clean'
                 }
             }
