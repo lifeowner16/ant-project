@@ -21,7 +21,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                withAnt(maven : 'maven') {
+                withAnt(ant : 'ant') {
                     sh 'ant test'
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
 
         stage ('Package Stage') {
             steps {
-                withAnt(maven : 'maven') {
+                withAnt(ant : 'ant') {
                     sh 'ant package'
                 }
             }
@@ -37,7 +37,7 @@ pipeline {
 
         stage ('verify Stage') {
             steps {
-                withAnt(maven : 'maven') {
+                withAnt(ant : 'ant') {
                     sh 'ant verify'
                 }
             }
