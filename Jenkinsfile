@@ -8,5 +8,13 @@ pipeline {
               git 'https://github.com/lifeowner16/ant-project'
                 }
             }   
-        } 
+        
+         stage ('Compile Stage') {
+            steps {
+                withAnt(ant : 'ant') {
+                    sh 'ant compile clean'
+                }
+            }
+        }
+    } 
 }    
