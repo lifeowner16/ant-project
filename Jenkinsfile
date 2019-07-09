@@ -10,7 +10,6 @@ pipeline {
             }
 
         stage ('Compile Stage') {
-         { agent label 'compile' }
             steps {
                 withAnt(ant : 'ant') {
                     sh 'ant compile clean'
