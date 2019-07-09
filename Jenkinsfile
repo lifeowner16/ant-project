@@ -11,7 +11,7 @@ pipeline {
         
          stage ('Compile Stage') {
             steps {
-                withAnt(compile: 'ant') {
+                withAnt(target: 'ant') {
                     sh 'ant compile'
                 }
             }
