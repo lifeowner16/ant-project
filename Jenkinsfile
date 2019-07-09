@@ -8,11 +8,11 @@ pipeline {
               git 'https://github.com/lifeowner16/ant-project'
                 }
             }   
-        
+      
          stage ('Compile Stage') {
             steps {
-                withAnt(target: 'ant') {
-                    sh 'ant compile'
+                withAnt(installation: 'LocalAnt') {
+                    sh "ant build"
                 }
             }
         }
