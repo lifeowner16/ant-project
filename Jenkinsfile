@@ -12,7 +12,7 @@ pipeline {
          stage ('Compile Stage') {
             steps {
                 withAnt(installation: 'LocalAnt') {
-                    sh "ant build"
+                    sh "ant clean"
                 }
             }
         }
